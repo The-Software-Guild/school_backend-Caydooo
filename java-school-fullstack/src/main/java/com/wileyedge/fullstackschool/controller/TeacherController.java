@@ -18,7 +18,8 @@ public class TeacherController {
     public List<Teacher> getAllTeachers() {
         //YOUR CODE STARTS HERE
 
-        return null;
+        List<Teacher> teachers = teacherServiceImpl.getAllTeachers();
+        return teachers;
 
         //YOUR CODE ENDS HERE
     }
@@ -27,7 +28,8 @@ public class TeacherController {
     public Teacher getTeacherById(@PathVariable int id) {
         //YOUR CODE STARTS HERE
 
-        return null;
+        Teacher teacher = teacherServiceImpl.getTeacherById(id);
+        return teacher;
 
         //YOUR CODE ENDS HERE
     }
@@ -36,7 +38,8 @@ public class TeacherController {
     public Teacher addTeacher(@RequestBody Teacher teacher) {
         //YOUR CODE STARTS HERE
 
-        return null;
+        Teacher t = teacherServiceImpl.addNewTeacher(teacher);
+        return t;
 
         //YOUR CODE ENDS HERE
     }
@@ -45,7 +48,8 @@ public class TeacherController {
     public Teacher updateTeacher(@PathVariable int id, @RequestBody Teacher teacher) {
         //YOUR CODE STARTS HERE
 
-        return null;
+        Teacher t = teacherServiceImpl.updateTeacherData(id, teacher);
+        return t;
 
         //YOUR CODE ENDS HERE
     }
@@ -54,7 +58,7 @@ public class TeacherController {
     public void deleteTeacher(@PathVariable int id) {
         //YOUR CODE STARTS HERE
 
-
+    	teacherServiceImpl.deleteTeacherById(id);
 
         //YOUR CODE ENDS HERE
     }
