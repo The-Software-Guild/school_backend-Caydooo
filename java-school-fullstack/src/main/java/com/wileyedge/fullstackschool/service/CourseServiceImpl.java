@@ -49,10 +49,8 @@ public class CourseServiceImpl implements CourseServiceInterface {
     	
     	Course c = null;
     	
-    	if(course.getCourseName().isBlank()) {
+    	if(course.getCourseName().isBlank() || course.getCourseDesc().isBlank()) {
     		course.setCourseName("Name blank, course NOT added");
-    		return course;
-    	} else if(course.getCourseDesc().isBlank()){
     		course.setCourseDesc("Description blank, course NOT added");
     		return course;
     	} else {
