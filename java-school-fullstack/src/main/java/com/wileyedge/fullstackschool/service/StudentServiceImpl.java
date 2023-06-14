@@ -22,7 +22,6 @@ public class StudentServiceImpl implements StudentServiceInterface {
     
     public StudentServiceImpl(StudentDao studentDao) {
         this.studentDao = studentDao;
-        courses = courseDao.getAllCourses();
     }
 
     //YOUR CODE ENDS HERE
@@ -96,6 +95,8 @@ public class StudentServiceImpl implements StudentServiceInterface {
     public void deleteStudentFromCourse(int studentId, int courseId) {
         //YOUR CODE STARTS HERE
 
+    	courses = courseDao.getAllCourses();
+    	
     	boolean outcome = true;
     	for(Student s : students) {
     		if(s.getStudentId() == studentId) {
