@@ -55,10 +55,8 @@ public class StudentServiceImpl implements StudentServiceInterface {
 
     	Student s = null;
     	
-    	if(student.getStudentFirstName().isBlank()) {
+    	if(student.getStudentFirstName().isBlank() || student.getStudentLastName().isBlank()) {
     		student.setStudentFirstName("First Name blank, student NOT added");
-    		return student;
-    	} else if(student.getStudentLastName().isBlank()){
     		student.setStudentLastName("Last Name blank, student NOT added");
     		return student;
     	} else {
