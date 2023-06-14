@@ -94,7 +94,6 @@ public class StudentServiceImpl implements StudentServiceInterface {
         //YOUR CODE STARTS HERE
 
     	courses = courseDao.getAllCourses();
-    	
     	boolean outcome = true;
     	for(Student s : students) {
     		if(s.getStudentId() == studentId) {
